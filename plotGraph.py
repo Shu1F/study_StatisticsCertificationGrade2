@@ -43,7 +43,28 @@ import numpy as np
 # data_devitation = np.std(data)
 # print(data_devitation)
 
-data = [4, 5, 2, 3, 7]
+# data = [4, 5, 2, 3, 7]
 
-data_devitation = np.std(data)
-print(data_devitation)
+# data_devitation = np.std(data)
+# print(data_devitation)
+
+
+import numpy as np
+import polars as pl
+import plotly.express as px
+import scipy
+import plotly.io as pio
+
+pio.templates.default = "none"
+
+data1 = pl.read_csv(
+    "https://drive.google.com/uc?export=download&id=1lbvFBOLK0irG3hWj3Q6RYnd4ugcyZFJw"
+)
+data2 = pl.read_csv(
+    "https://drive.google.com/uc?export=download&id=19foMWN1GSzRNacVYBVGGR9pfEyhBU4LN"
+)
+data3 = pl.read_csv(
+    "https://drive.google.com/uc?export=download&id=1HHUl9hMeXQIHQKndJyt2BebTXZFCDuQK"
+)
+
+data1.describe()
